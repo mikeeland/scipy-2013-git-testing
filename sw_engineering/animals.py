@@ -71,7 +71,15 @@ def mean(nums):
     m : number
 
     """
-    # fill this in
+    if not isinstance(nums, list):
+        raise ValueError
+    elif len(nums) == 0:
+        return 0
+
+    nums = [float(i) for i in nums]
+
+    m = sum(nums) / len(nums) * 1.0
+    return m
 
 
 def filter_animals_by_kind(kind, date, time, species, count):
